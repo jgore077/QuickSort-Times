@@ -50,26 +50,30 @@ public class activity23 {
         long startTime, endTime;
         
         // Measure the time taken to execute Quicksort with x[mid] pivot policy
+        int[] array1 = Arrays.copyOf(millionArray, millionArray.length);
         startTime = System.nanoTime();
-        quickSort(millionArray, 0, millionArray.length-1);
+        quickSort(array1, 0, array1.length-1);
         endTime = System.nanoTime();
         System.out.println("x[mid] pivot policy: " + (endTime-startTime)/1000000.0 + " ms");
         
         // Measure the time taken to execute Quicksort with median of 10 sampled values pivot policy
+        int[] array2 = Arrays.copyOf(millionArray, millionArray.length);
         startTime = System.nanoTime();
-        quickSort(millionArray, 0, millionArray.length-1);
+        quickSort(array2, 0, array2.length-1);
         endTime = System.nanoTime();
         System.out.println("median of 10 sampled values pivot policy: " + (endTime-startTime)/1000000.0 + " ms");
         
         // Measure the time taken to execute Quicksort with average of all values pivot policy
+        int[] array3 = Arrays.copyOf(millionArray, millionArray.length);
         startTime = System.nanoTime();
-        quickSort(millionArray, 0, millionArray.length-1);
+        quickSort(array3, 0, array3.length-1);
         endTime = System.nanoTime();
         System.out.println("average of all values pivot policy: " + (endTime-startTime)/1000000.0 + " ms");
         
         // Measure the time taken to execute Quicksort with median of all values pivot policy
+        int[] array4 = Arrays.copyOf(millionArray, millionArray.length);
         startTime = System.nanoTime();
-        quickSort(millionArray, 0, millionArray.length-1);
+        quickSort(array4, 0, array4.length-1);
         endTime = System.nanoTime();
         System.out.println("median of all values pivot policy: " + (endTime-startTime)/1000000.0 + " ms");
     }
